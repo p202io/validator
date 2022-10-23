@@ -5,7 +5,7 @@ WORKDIR /workspace
 COPY . /workspace/.
 
 # Build binaries for minimal configuration.
-RUN bazel build --define ssz=minimal --jobs=auto --remote_cache= \
+RUN bazel build --define network=minimal --jobs=auto --remote_cache= \
   //beacon-chain \
   //validator \
   //tools/interop/convert-keys
