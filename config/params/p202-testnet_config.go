@@ -17,7 +17,7 @@ func P202TestnetConfig() *BeaconChainConfig {
 	cfg := MainnetConfig().Copy()
 
 	// Constants (Non-configurable)
-	cfg.GenesisDelay = 1500
+	cfg.GenesisDelay = 120
 
 	// Misc constant.
 	cfg.MinGenesisActiveValidatorCount = 202
