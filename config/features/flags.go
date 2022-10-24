@@ -25,9 +25,19 @@ var (
 	}
 	// Mainnet flag for easier tooling, no-op
 	Mainnet = &cli.BoolFlag{
-		Value: true,
+		Value: false,
 		Name:  "mainnet",
 		Usage: "Run on Ethereum Beacon Chain Main Net. This is the default and can be omitted.",
+	}
+	P202Mainnet = &cli.BoolFlag{
+		Value: true,
+		Name:  "p202-mainnet",
+		Usage: "Run on Project202 Mainnet. This is the default and can be omitted.",
+	}
+	P202Testnet = &cli.BoolFlag{
+		Value: false,
+		Name:  "p202-testnet",
+		Usage: "Run on Project202 Testnet. This is the default and can be omitted.",
 	}
 	devModeFlag = &cli.BoolFlag{
 		Name:  "dev",
@@ -141,6 +151,8 @@ var ValidatorFlags = append(deprecatedFlags, []cli.Flag{
 	RopstenTestnet,
 	SepoliaTestnet,
 	Mainnet,
+	P202Mainnet,
+	P202Testnet,
 	dynamicKeyReloadDebounceInterval,
 	attestTimely,
 	enableSlashingProtectionPruning,
@@ -161,6 +173,8 @@ var BeaconChainFlags = append(deprecatedBeaconFlags, append(deprecatedFlags, []c
 	RopstenTestnet,
 	SepoliaTestnet,
 	Mainnet,
+	P202Mainnet,
+	P202Testnet,
 	disablePeerScorer,
 	disableBroadcastSlashingFlag,
 	enableSlasherFlag,

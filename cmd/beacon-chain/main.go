@@ -220,7 +220,7 @@ func main() {
 
 func startNode(ctx *cli.Context) error {
 	// Fix data dir for Windows users.
-	outdatedDataDir := filepath.Join(file.HomeDir(), "AppData", "Roaming", "Eth2")
+	outdatedDataDir := filepath.Join(file.HomeDir(), "AppData", "Roaming", "P202")
 	currentDataDir := ctx.String(cmd.DataDirFlag.Name)
 	if err := cmd.FixDefaultDataDir(outdatedDataDir, currentDataDir); err != nil {
 		return err

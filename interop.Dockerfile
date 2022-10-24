@@ -6,8 +6,8 @@ COPY . /workspace/.
 
 # Build binaries for minimal configuration.
 RUN bazel build --define network=minimal --jobs=auto --remote_cache= \
-  //beacon-chain \
-  //validator \
+  //cmd/beacon-chain:beacon-chain \
+  //cmd/validator:validator \
   //tools/interop/convert-keys
 
 

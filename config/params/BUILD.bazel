@@ -12,6 +12,8 @@ go_library(
         "io_config.go",
         "loader.go",
         "mainnet_config.go",
+        "p202-mainnet_config.go",
+        "p202-testnet_config.go",
         "minimal_config.go",
         "network_config.go",
         "testnet_e2e_config.go",

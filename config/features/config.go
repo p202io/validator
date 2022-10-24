@@ -136,6 +136,20 @@ func configureTestnet(ctx *cli.Context) error {
 		}
 		applySepoliaFeatureFlags(ctx)
 		params.UseSepoliaNetworkConfig()
+	} else if ctx.Bool(P202Testnet.Name) {
+		log.Warn("Running on the Project202 Testnet")
+		if err := params.SetActive(params.P202TestnetConfig().Copy()); err != nil {
+			return err
+		}
+		applyP202TestnetFeatureFlags(ctx)
+		params.UseP202TestnetNetworkConfig()
+	}  else if ctx.Bool(P202Mainnet.Name) {
+		log.Warn("Running on the Project202 Mainnet")
+		if err := params.SetActive(params.P202MainnetConfig().Copy()); err != nil {
+			return err
+		}
+		applyP202MainnetFeatureFlags(ctx)
+		params.UseP202MainnetNetworkConfig()
 	} else {
 		if ctx.IsSet(cmd.ChainConfigFileFlag.Name) {
 			log.Warn("Running on custom Ethereum network specified in a chain configuration yaml file")
@@ -162,6 +176,14 @@ func applyRopstenFeatureFlags(ctx *cli.Context) {
 
 // Insert feature flags within the function to be enabled for Sepolia testnet.
 func applySepoliaFeatureFlags(ctx *cli.Context) {
+}
+
+// Insert feature flags within the function to be enabled for Project202 Testnet.
+func applyP202TestnetFeatureFlags(ctx *cli.Context) {
+}
+
+// Insert feature flags within the function to be enabled for Project202 Mainnet.
+func applyP202MainnetFeatureFlags(ctx *cli.Context) {
 }
 
 // ConfigureBeaconChain sets the global config based

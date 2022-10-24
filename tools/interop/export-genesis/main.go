@@ -9,9 +9,9 @@ import (
 	"github.com/prysmaticlabs/prysm/v3/io/file"
 )
 
-// A basic tool to extract genesis.ssz from existing beaconchain.db.
+// A basic tool to extract genesis.ssz from existing chain.db.
 // ex:
-//   bazel run //tools/interop/export-genesis:export-genesis -- /tmp/data/beaconchaindata /tmp/genesis.ssz
+//   bazel run //tools/interop/export-genesis:export-genesis -- /tmp/data/chaindata /tmp/genesis.ssz
 func main() {
 	if len(os.Args) < 3 {
 		fmt.Println("Usage: ./main /path/to/datadir /path/to/output/genesis.ssz")

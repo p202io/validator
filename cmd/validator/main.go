@@ -171,7 +171,7 @@ func main() {
 		}
 
 		// Fix data dir for Windows users.
-		outdatedDataDir := filepath.Join(file.HomeDir(), "AppData", "Roaming", "Eth2Validators")
+		outdatedDataDir := filepath.Join(file.HomeDir(), "AppData", "Roaming", "P202Validators")
 		currentDataDir := flags.DefaultValidatorDir()
 		if err := cmd.FixDefaultDataDir(outdatedDataDir, currentDataDir); err != nil {
 			log.WithError(err).Error("Cannot update data directory")
