@@ -20,7 +20,7 @@ func P202MainnetConfig() *BeaconChainConfig {
 	cfg.GenesisDelay = 120
 
 	// Misc constant.
-	cfg.MinGenesisActiveValidatorCount = 202
+	cfg.MinGenesisActiveValidatorCount = 64
 	cfg.MinGenesisTime = 1666670400 // P202_TODO
 
 	// Gwei value constants.
@@ -29,7 +29,7 @@ func P202MainnetConfig() *BeaconChainConfig {
 
 	// Time parameter constants.
 	cfg.SecondsPerETH1Block = 3
-	cfg.SecondsPerSlot = 2
+	cfg.SecondsPerSlot = 3
 
 	// Ethereum PoW parameters.
 	cfg.DepositChainID = 202 //eth1Params.P202MainnetChainConfig.ChainID.Uint64()
@@ -42,11 +42,11 @@ func P202MainnetConfig() *BeaconChainConfig {
 
 	// Fork related values.
 	cfg.GenesisForkVersion = []byte{0x00, 0x00, 0x02, 0x02}
-	cfg.AltairForkEpoch = 10
+	cfg.AltairForkEpoch = 1
 	cfg.AltairForkVersion = []byte{0x01, 0x00, 0x02, 0x02}
-	cfg.BellatrixForkEpoch = 20
+	cfg.BellatrixForkEpoch = 2
 	cfg.BellatrixForkVersion = []byte{0x02, 0x00, 0x02, 0x02}
-	cfg.CapellaForkEpoch = 30
+	cfg.CapellaForkEpoch = 3
 	cfg.CapellaForkVersion = []byte{0x03, 0x00, 0x02, 0x02}
 	cfg.ShardingForkVersion = []byte{0x04, 0x00, 0x02, 0x02}
 
