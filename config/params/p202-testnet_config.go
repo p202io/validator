@@ -20,10 +20,6 @@ func P202TestnetConfig() *BeaconChainConfig {
 	cfg.GenesisDelay = 120
 
 	// Misc constant.
-	cfg.TargetCommitteeSize = 4
-	cfg.MaxValidatorsPerCommittee = 2048
-	cfg.ChurnLimitQuotient = 32
-	cfg.ShuffleRoundCount = 10
 	cfg.MinGenesisActiveValidatorCount = 64
 	cfg.MinGenesisTime = 1666764000 // P202_TODO
 
@@ -34,30 +30,10 @@ func P202TestnetConfig() *BeaconChainConfig {
 	// Time parameter constants.
 	cfg.SecondsPerETH1Block = 3
 	cfg.SecondsPerSlot = 3
-	cfg.SlotsPerEpoch = 8
-	cfg.SqrRootSlotsPerEpoch = 2
-	cfg.EpochsPerEth1VotingPeriod = 4
-	cfg.SlotsPerHistoricalRoot = 64
-	cfg.ShardCommitteePeriod = 64
-	cfg.Eth1FollowDistance = 16
-	cfg.SafeSlotsToUpdateJustified = 2
-
-	// State list length constants.
-	cfg.EpochsPerHistoricalVector = 64
-	cfg.EpochsPerSlashingsVector = 64
-
-	// Reward and penalty quotients
-	cfg.InactivityPenaltyQuotient = 33554432
-	cfg.MinSlashingPenaltyQuotient = 64
-	cfg.ProportionalSlashingMultiplier = 2
-
-	// Misc values.
-	cfg.SyncCommitteeSize = 32
-	cfg.EpochsPerSyncCommitteePeriod = 8
 
 	// Ethereum PoW parameters.
-	cfg.DepositChainID = 10202 //eth1Params.P202TestnetChainConfig.ChainID.Uint64()
-	cfg.DepositNetworkID = 10202 //eth1Params.P202TestnetChainConfig.ChainID.Uint64()
+	cfg.DepositChainID = 10202 //eth1Params.P202MainnetChainConfig.ChainID.Uint64()
+	cfg.DepositNetworkID = 10202 //eth1Params.P202MainnetChainConfig.ChainID.Uint64()
 	cfg.DepositContractAddress = "0x4242424242424242424242424242424242424242"
 
 	// Prysm constants.
