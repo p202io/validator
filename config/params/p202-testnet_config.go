@@ -47,8 +47,9 @@ func P202TestnetConfig() *BeaconChainConfig {
 	cfg.AltairForkVersion = []byte{0x01, 0x01, 0x02, 0x02}
 	cfg.BellatrixForkEpoch = 2
 	cfg.BellatrixForkVersion = []byte{0x02, 0x01, 0x02, 0x02}
-	cfg.CapellaForkEpoch = 3
+	//cfg.CapellaForkEpoch = 3
 	cfg.CapellaForkVersion = []byte{0x03, 0x01, 0x02, 0x02}
+	//cfg.ShardingForkEpoch = 
 	cfg.ShardingForkVersion = []byte{0x04, 0x01, 0x02, 0x02}
 
 	// Bellatrix
