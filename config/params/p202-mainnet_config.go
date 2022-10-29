@@ -21,7 +21,7 @@ func P202MainnetConfig() *BeaconChainConfig {
 
 	// Misc constant.
 	cfg.MinGenesisActiveValidatorCount = 64
-	cfg.MinGenesisTime = 1667028600 // P202_TODO
+	cfg.MinGenesisTime = 1667062800 // P202_TODO
 
 	// Gwei value constants.
 	cfg.MaxEffectiveBalance = 202 * 1e9
