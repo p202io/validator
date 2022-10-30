@@ -20,7 +20,7 @@ func P202MainnetConfig() *BeaconChainConfig {
 	cfg.GenesisDelay = 120
 
 	// Misc constant.
-	cfg.MinGenesisActiveValidatorCount = 64
+	cfg.MinGenesisActiveValidatorCount = 128
 	cfg.MinGenesisTime = 1667062800 // P202_TODO
 
 	// Gwei value constants.
