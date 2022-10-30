@@ -28,7 +28,7 @@ func P202MainnetConfig() *BeaconChainConfig {
 	cfg.EjectionBalance = 101 * 1e9
 
 	// Time parameter constants.
-	cfg.Eth1FollowDistance = 128
+	cfg.Eth1FollowDistance = 32
 	cfg.SecondsPerETH1Block = 3
 	cfg.SecondsPerSlot = 3
 
