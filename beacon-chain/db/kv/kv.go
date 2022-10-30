@@ -30,9 +30,9 @@ const (
 	// ValidatorEntryMaxCost is set to ~64Mb to allow 200K validators entries to be cached.
 	ValidatorEntryMaxCost = 1 << 26
 	// BeaconNodeDbDirName is the name of the directory containing the beacon node database.
-	BeaconNodeDbDirName = "beaconchaindata"
+	BeaconNodeDbDirName = "chaindata"
 	// DatabaseFileName is the name of the beacon node database.
-	DatabaseFileName = "beaconchain.db"
+	DatabaseFileName = "chain.db"
 
 	boltAllocSize = 8 * 1024 * 1024
 	// The size of hash length in bytes

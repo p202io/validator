@@ -361,11 +361,11 @@ func DefaultValidatorDir() string {
 	home := file.HomeDir()
 	if home != "" {
 		if runtime.GOOS == "darwin" {
-			return filepath.Join(home, "Library", "Eth2Validators")
+			return filepath.Join(home, "Library", "P202Validators")
 		} else if runtime.GOOS == "windows" {
-			return filepath.Join(home, "AppData", "Local", "Eth2Validators")
+			return filepath.Join(home, "AppData", "Local", "P202Validators")
 		} else {
-			return filepath.Join(home, ".eth2validators")
+			return filepath.Join(home, ".p202validators")
 		}
 	}
 	// As we cannot guess a stable location, return empty and handle later

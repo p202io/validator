@@ -3,6 +3,8 @@ package params
 func init() {
 	defaults := []*BeaconChainConfig{
 		MainnetConfig(),
+		P202MainnetConfig(),
+		P202TestnetConfig(),
 		PraterConfig(),
 		MinimalSpecConfig(),
 		E2ETestConfig(),
