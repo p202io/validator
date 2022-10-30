@@ -28,7 +28,7 @@ func P202MainnetConfig() *BeaconChainConfig {
 	cfg.EjectionBalance = 101 * 1e9
 
 	// Time parameter constants.
-	cfg.Eth1FollowDistance = 1024
+	cfg.Eth1FollowDistance = 16
 	cfg.SecondsPerETH1Block = 3
 	cfg.SecondsPerSlot = 3
 
@@ -53,7 +53,7 @@ func P202MainnetConfig() *BeaconChainConfig {
 	cfg.ShardingForkVersion = []byte{0x04, 0x00, 0x02, 0x02}
 
 	// Bellatrix
-	cfg.TerminalTotalDifficulty = "6000"
+	cfg.TerminalTotalDifficulty = "1000"
 
 	cfg.InitializeForkSchedule()
 	return cfg
