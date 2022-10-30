@@ -53,7 +53,7 @@ func P202MainnetConfig() *BeaconChainConfig {
 	cfg.ShardingForkVersion = []byte{0x04, 0x00, 0x02, 0x02}
 
 	// Bellatrix
-	cfg.TerminalTotalDifficulty = "1500"
+	cfg.TerminalTotalDifficulty = "2000"
 
 	cfg.InitializeForkSchedule()
 	return cfg
