@@ -20,15 +20,15 @@ func P202MainnetConfig() *BeaconChainConfig {
 	cfg.GenesisDelay = 120
 
 	// Misc constant.
-	cfg.MinGenesisActiveValidatorCount = 128
-	cfg.MinGenesisTime = 1667062800 // P202_TODO
+	cfg.MinGenesisActiveValidatorCount = 8192
+	cfg.MinGenesisTime = 1667156400
 
 	// Gwei value constants.
 	cfg.MaxEffectiveBalance = 202 * 1e9
 	cfg.EjectionBalance = 101 * 1e9
 
 	// Time parameter constants.
-	cfg.Eth1FollowDistance = 32
+	//cfg.Eth1FollowDistance = 2048
 	cfg.SecondsPerETH1Block = 3
 	cfg.SecondsPerSlot = 3
 
@@ -53,7 +53,7 @@ func P202MainnetConfig() *BeaconChainConfig {
 	cfg.ShardingForkVersion = []byte{0x04, 0x00, 0x02, 0x02}
 
 	// Bellatrix
-	cfg.TerminalTotalDifficulty = "2000"
+	cfg.TerminalTotalDifficulty = "60000"
 
 	cfg.InitializeForkSchedule()
 	return cfg
