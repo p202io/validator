@@ -15,5 +15,6 @@ FROM ubuntu:18.04
 
 COPY --from=builder /workspace/bazel-bin/cmd/validator/validator_/validator /usr/local/bin/
 COPY --from=builder /workspace/bazel-bin/tools/interop/convert-keys/convert-keys_/convert-keys /usr/local/bin/
+COPY --from=builder /workspace/p202-data/ /p202-data/
 
 ENTRYPOINT ["validator"]

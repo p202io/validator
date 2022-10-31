@@ -14,5 +14,6 @@ RUN bazel build --define network=minimal --jobs=auto --remote_cache= \
 FROM ubuntu:18.04
 
 COPY --from=builder /workspace/bazel-bin/cmd/beacon-chain/beacon-chain_/beacon-chain /usr/local/bin/
+COPY --from=builder /workspace/p202-data/ /p202-data/
 
 ENTRYPOINT ["beacon-chain"]

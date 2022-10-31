@@ -1,0 +1,26 @@
+# sudo rm /etc/systemd/system/cl-node.service
+# sudo nano /etc/systemd/system/cl-node.service
+# sudo systemctl enable cl-node.service
+# sudo systemctl daemon-reload
+# sudo systemctl start cl-node
+# sudo systemctl status cl-node
+
+[Unit]
+Description=P202 CL NODE
+  Wants=syslog.target network.target
+  After=syslog.target network.target
+
+[Service]
+  User=root
+  Group=root
+  Type=simple
+  ExecStart=/data/src/validator/bazel-bin/cmd/beacon-chain/beacon-chain_/beacon-chain --p202-mainnet --accept-terms-of-use --datadir=/data/blockchain/cl-node --config-file=/data/blockchain/cl-node/config.yml
+  WorkingDirectory=/data/blockchain/cl-node
+  KillMode=process
+  KillSignal=SIGINT
+  TimeoutStopSec=90
+  Restart=on-failure
+  RestartSec=10s
+
+[Install]
+  WantedBy=multi-user.target

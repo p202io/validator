@@ -1,0 +1,27 @@
+# sudo rm /etc/systemd/system/cl-validator.service
+# sudo nano /etc/systemd/system/cl-validator.service
+# sudo systemctl enable cl-validator.service
+# sudo systemctl daemon-reload
+# sudo systemctl start cl-validator
+# sudo systemctl status cl-validator
+
+[Unit]
+Description=P202 CL VALIDATOR
+  Wants=syslog.target network.target
+  After=syslog.target network.target
+
+[Service]
+  User=root
+  Group=root
+  Type=simple
+  ExecStart=/data/src/validator/bazel-bin/cmd/validator/validator_/validator --p202-mainnet --accept-terms-of-use --datadir=/data/blockchain/cl-validator --config-file=/data/blockchain/cl-validator/config.yml
+
+  WorkingDirectory=/data/blockchain/cl-validator
+  KillMode=process
+  KillSignal=SIGINT
+  TimeoutStopSec=90
+  Restart=on-failure
+  RestartSec=10s
+
+[Install]
+  WantedBy=multi-user.target

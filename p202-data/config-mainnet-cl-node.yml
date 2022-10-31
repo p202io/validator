@@ -1,0 +1,53 @@
+# rm /data/blockchain/cl-node/config.yml
+# sudo nano /data/blockchain/cl-node/config.yml
+# Configuration file for Prysm beacon-chain
+
+# datadir: Location of blockchain data
+datadir: /data/blockchain/cl-node
+
+# http-web3provider: ETH1 API endpoint, eg. http://localhost:8545 for a local geth service on the default port
+#execution-endpoint: /data/blockchain/el-node/geth.ipc
+execution-endpoint: http://127.0.0.1:8551
+jwt-secret: /data/blockchain/el-node/geth/jwtsecret
+
+p202-mainnet: true
+accept-terms-of-use: true
+verbosity: info
+
+slots-per-archive-point: 32
+
+slasher: true
+historical-slasher-node: true
+enable-debug-rpc-endpoints: true
+subscribe-all-subnets: true
+
+enable-upnp: true
+min-sync-peers: 0
+p2p-priv-key: /data/blockchain/cl-node/p2p-priv-key
+p2p-local-ip: 0.0.0.0
+#p2p-host-ip: ?
+#p2p-host-dns: ?
+grpc-gateway-host: 0.0.0.0
+rpc-host: 0.0.0.0
+monitoring-host: 0.0.0.0
+
+
+#relay-node: http://185.180.223.56:3500
+#checkpoint-sync-url: http://185.180.223.56:3500
+#genesis-beacon-api-url: http://185.180.223.56:3500
+#bootstrap-node: enr:
+#peer=/ip4/
+peer: ["/ip4/185.180.223.56/tcp/13000/p2p/16Uiu2HAmLgjCSihf4VttpzjJituZyt6QgmQseVEt4p6M9KKmYNac",
+"/ip4/89.38.99.39/tcp/13000/p2p/16Uiu2HAmMrQk3bv3CZHjjxZg8yVpRpVEk3Dk2zeHtiTYvhnAmncx",
+"/ip4/93.190.141.17/tcp/13000/p2p/16Uiu2HAmLKUvtuhfxoLqWJaj9NDBddjxePYbsdQwrBPYwrmvDgaL"]
+
+# Optional tuning parameters
+# For full list, see https://docs.prylabs.network/docs/prysm-usage/parameters
+
+# p2p-max-peers: The max number of p2p peers to maintain. Default: 45
+# block-batch-limit: The amount of blocks the local peer is bounded to request and respond to in a batch. Default: 64
+block-batch-limit: 1000
+# block-batch-limit-burst-factor: The factor by which block batch limit may increase on burst. Default: 10
+block-batch-limit-burst-factor: 100
+# p2p-udp-port: The port used by discv5. Default: 12000
+# p2p-tcp-port: The port used by libP2P. Default: 13000
