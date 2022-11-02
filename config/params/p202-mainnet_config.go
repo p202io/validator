@@ -29,8 +29,8 @@ func P202MainnetConfig() *BeaconChainConfig {
 
 	// Time parameter constants.
 	cfg.Eth1FollowDistance = 16
-	cfg.SecondsPerETH1Block = 3
-	cfg.SecondsPerSlot = 3
+	cfg.SecondsPerETH1Block = 5
+	cfg.SecondsPerSlot = 4
 
 	// Ethereum PoW parameters.
 	cfg.DepositChainID = 202 //eth1Params.P202MainnetChainConfig.ChainID.Uint64()
