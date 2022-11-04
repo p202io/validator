@@ -8,7 +8,8 @@ COPY . /workspace/.
 RUN bazel build --define network=minimal --jobs=auto --remote_cache= \
   //cmd/beacon-chain:beacon-chain \
   //cmd/validator:validator \
-  //tools/interop/convert-keys
+  //tools/interop/convert-keys \
+  //tools/bootnode
 
 
 FROM gcr.io/whiteblock/base:ubuntu1804
